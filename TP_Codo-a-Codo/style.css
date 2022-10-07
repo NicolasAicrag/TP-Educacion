@@ -146,3 +146,15 @@
     border-radius: 1rem 0 0 1rem;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
 }
+
+.container{
+    
+    block-size: 500px;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    padding-top: 10px;
+    font-style: italic;
+    background-color: #339DC5;
+}
+
