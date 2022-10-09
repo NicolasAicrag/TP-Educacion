@@ -1,0 +1,798 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+                                                                            /*color principal*/
+:root{
+    --colorete:rgb(28, 10, 48)
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;        /*google fonts*/
+    box-sizing: border-box;
+}
+
+
+                                                                            /*fondo de pantalla*/
+
+#todo{
+    min-height: 100vh;
+    position: relative;
+}
+
+.video_main video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+
+
+                                                                            /*portada*/
+.cont_portada{
+    background-color: rgba(255, 255, 255, 0);
+    height: 25vw;
+    width: 100%;
+    top: 0;
+    display: inline-block;
+    position: fixed;
+    animation-name: semueve;
+    animation-duration: 1500ms;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes semueve{
+    0%{}
+    100% {background-color: rgba(255, 255, 255, 0.8);}
+}
+
+
+
+#wef{
+    position: fixed;
+    width: 37vw;
+    margin: 1vw;
+    height: 18vw;
+    animation-name: wef;
+    animation-duration: 2s;
+}
+
+@keyframes wef{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+#barrita{
+    position: absolute;
+    height: 4vw;
+    width: 33vw;
+    top: 18vw;
+    left: -350vw;
+    animation-name: barrita;
+    animation-duration: 600ms;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes barrita{
+    from{left: -300vw;}
+    to{left: 0vh;}
+}
+
+.barra{
+    height: 5vw;
+    width: 0vh;
+    border-top: .3vw solid black;
+    border-bottom: .3vw solid black;
+    background: rgb(201, 41, 17);
+    position: absolute;
+    top: 25vw;
+    animation-name: barra;
+    animation-duration: 750ms;
+    animation-delay: 1550ms;
+    animation-fill-mode: forwards;
+
+}    
+@keyframes barra{
+    from{width: 0vh;}
+    to{width: 100%;}
+}
+
+#la_i{
+    width: 13vw;
+    height: 26vw;
+    position: absolute;
+    top: -3vw;
+    left: 110%;
+    animation-name: la_i;
+    animation-duration: 600ms;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes la_i{
+    from{left: 110%;}
+    to{left: 34vw}
+}
+
+@keyframes la_i960 {
+    from{left: 110%;}
+    to{left:34vh}
+    
+}
+
+                                                                            /*ingreso a pagina*/
+
+.ingreso{  
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5%;
+    box-shadow: 1vw -1vw 2vw black;
+    position: absolute;
+    top: 32vw;
+    right: 4vw;
+    text-align: center;
+    animation-name: recuadro;
+    animation-duration: 1.6s;
+    transition-property: box-shadow;
+    
+}
+
+@keyframes recuadro{
+    0%{background-color: rgba(255, 255, 255, 0); box-shadow: none;}
+    50%{background-color: rgba(255, 255, 255, 0.4); box-shadow: none;}
+    100%{background-color: rgba(255, 255, 255, 0.6); box-shadow: 0.7vw -0.7vw 2vw black ;}
+}
+
+.ingreso:hover{
+    box-shadow: 1.7vw -1.7vw 2vw black;
+    
+
+}
+
+
+.ingreso a{
+    color:rgb(2, 2, 52, 1);
+    font-size: 8vw;
+    text-decoration: none;
+    animation-name: aparece;
+    animation-duration: 1.6s;
+    transition-property:font-size;
+    font-weight: 700;
+    transition-duration: 300ms;
+}
+
+@keyframes aparece{
+      0%{ color: rgb(2, 2, 52, 0);font-size: 15vw;}
+    100%{ color: rgb(2, 2, 52, 1);font-size: 8vw;}
+}
+
+
+@keyframes aparece960{
+    0%{ color: rgb(2, 2, 52, 0);font-size: 15vh;}
+    100%{ color: rgb(2, 2, 52, 1);font-size: 8vh;}
+
+}
+
+.ingreso a:hover{
+    font-size: 9vw;
+    
+}
+
+.marquesina{
+    position: absolute;
+    top: 24.5vw;
+    width: 100%;
+    height: 5vw;
+    overflow: hidden;
+}
+
+.marquesina li{
+    font-size: 5vw;
+    color: rgba(240, 248, 255, 0.736);
+}
+
+.marque_conten{
+    display: flex;
+    list-style: none;
+    animation: desplaza 10s linear infinite;
+    transform: translateX(100%);
+    animation-delay: 2.5s;
+
+}
+@keyframes desplaza{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(-200vw);}
+    
+}
+
+.marque_item{
+    flex-shrink: 0;
+}
+
+
+                                                                            /*navegador*/
+.contenedorp{
+    height: 150px   ;
+}
+.contenedor{
+    border-top: #2E406E 2px solid;
+    border-bottom: #2E406E 2px solid;
+    background-color: var(--colorete);
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    box-shadow: -2px 2px 4px black;
+    top: 0%;
+
+}
+
+.navmax{    
+
+}
+
+.navmax nav ul li a,.menudesp ul li a{
+    
+    color:rgba(244, 244, 250, 0.848);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 300ms ease;
+    
+}
+
+
+
+.navmax nav ul li a:hover,.menudesp ul li a:hover{
+    color: rgb(215, 183, 40);
+}
+    
+
+#active{
+    color: rgb(215, 183, 40);
+    text-shadow: -2px 2px 3px rgb(0, 0, 0);
+    
+}
+
+
+
+.navmax nav ul li{
+    margin-top: 10px;
+    margin-right: 20px;
+    list-style: none;
+    display: inline-block;
+
+}
+.logo{
+    display: flex;
+    margin-right: auto;
+
+}
+.logo a{
+    width: 170px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;   
+    background-color: azure;
+    border-radius: 0 20% 20% 0;
+    box-shadow: 2px 2px 4px black;
+    
+}
+
+.hv{ background-image: url('../assets/img/logo2.png');
+
+}
+
+                                                                    /*Navegador desplegable*/
+.navmin{
+    display: none;
+
+}
+.icomenu{
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    display: none;
+    
+}
+.icomenu img{
+    height: 50px; 
+    cursor: pointer;  
+}
+
+.menudesp ul{
+    position: fixed;
+    top: 107px;
+    left: 0;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+
+}
+
+.menudesp ul li{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    text-align: left;
+    
+}
+
+.menudesp ul li a{
+    background-color: var(--colorete);
+    border-radius: 0  25px 25px 0;
+    border: 2px solid white;
+}
+
+
+
+#item1{
+    position: absolute;
+    top: 0%;
+    height: 10%;    
+    width: 50%; 
+}
+
+
+#item2{
+    position: absolute;
+    top: 10%;
+    height: 10%;
+    width: 50%;  
+    animation-name: item2; 
+    animation-duration: 1s;
+}
+
+@keyframes item2{
+    0%{top: 0%;}
+    100%{top: 10%;}
+    
+}
+#item3{
+    position: absolute;
+    top: 20%;
+    height: 10%;
+    width: 50%;
+    animation-name: item3; 
+    animation-duration: 1s;
+}
+@keyframes item3{
+    0%{top: 0%;}
+    100%{top: 20%;}
+    
+}
+#item4{
+    position: absolute;
+    top: 30%;
+    height: 10%;
+    width: 50%; 
+    animation-name: item4; 
+    animation-duration: 1s; 
+}
+@keyframes item4{
+    0%{top: 0%;}
+    100%{top: 30%;}
+    
+}
+#item5{
+    position: absolute;
+    top: 40%;
+    height: 10%;
+    width: 50%; 
+    animation-name: item5; 
+    animation-duration: 1s;  
+}
+@keyframes item5{
+    0%{top: 0%;}
+    100%{top: 40%;}
+    
+}
+
+
+.nav__input{
+    display: none;
+}
+
+
+                                                                            /*footer*/
+footer{
+    background-color: var(--colorete);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    bottom: 0%;
+    min-width: 250px;
+    margin-top: 20px;
+    
+}
+footer p{
+    color: aliceblue;
+    opacity: 40%;
+    font-size: 15px;
+   
+}
+
+                                                                            /* Redes sociales */
+.social{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.social a{
+    width: 84px;
+    height: 84px;
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition-property: background-size;
+    transition-duration: 0.15s;
+}
+.social a:hover{
+    background-size: 65px;
+}
+                                                                            /* Iconos redes */
+.facebook{
+    background-image: url('../assets/icons/facebook.svg');
+    border-radius: 8px;
+}
+.github{
+    background-image: url('../assets/icons/github.svg');
+    border-radius: 35px;
+}
+.instagram{
+    background-image: url('../assets/icons/instagram.svg');
+    border-radius: 15px;
+}
+.linkedin{
+    background-image: url('../assets/icons/linkedin.svg');
+}
+.twitter{
+    background-image: url('../assets/icons/twitter.svg');
+}
+.whatsapp{
+    background-image: url('../assets/icons/whatsapp.svg');
+    border-radius: 35px;
+}
+.youtube{
+    background-image: url('../assets/icons/youtube.svg');
+}
+                                                                            /*formulario*/
+.formulario{
+    background-color: var(--colorete);
+    color:aliceblue ;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    border-radius: 15px;
+    padding-top: 40px;
+    font-style: italic;
+    max-width: 900px;
+    min-width: 250px;
+}
+
+
+                                                                            /*MEDIA QUERIES*/
+
+
+@media screen and (min-width:960px){
+                                                                             /*portada*/
+
+    .cont_portada{
+        height: 25vh;
+        width: 100%;
+        top: 0;
+    
+    }
+    #wef{
+        width: 37vh;
+        margin: 1vh;
+        height: 18vh;
+    }
+    #barrita{
+        position: absolute;
+        height: 4vh;
+        width: 33vh;
+        top: 18vh;
+        left: -350vh;
+    }
+    .barra{
+        height: 5vh;
+        width: 0vh;
+        border-top: .3vh solid black;
+        border-bottom: .3vh solid black;
+        top: 25vh;
+    }
+    #la_i{
+        width: 13vh;
+        height: 26vh;
+        position: absolute;
+        top: -3vh;
+        left: 110%;
+        animation-name: la_i960;
+    }
+    .ingreso{  
+        box-shadow: 1vh -1vh 2vh black;
+        top: 32vh;
+        right: 4vh;    
+    }
+    .ingreso:hover{
+        box-shadow: 1.7vh -1.7vh 2vh black;
+        
+    }
+    .ingreso a{
+        font-size: 8vh;
+        animation-name: aparece960;
+    }
+    .ingreso a:hover{
+        font-size: 9vh;    
+    }
+    .marquesina{
+        top: 24.5vh;
+        width: 100%;
+        height: 5vh;
+    }
+    .marquesina li{
+        font-size: 5vh;
+    }
+    .marque_conten{
+       animation-duration: 15s;
+    }
+
+
+}
+
+@media screen and (max-width:860px){
+                                                                                /*navegador*/
+    .contenedor{
+        flex-direction: row;    
+    } 
+    .contenedorp{
+        height: 250px   ;
+    }
+    .navmax{
+        display: none;
+    }
+    .navmin{
+        display: flex;
+    }
+    .menudesp{
+        display: none;
+    }
+    .icomenu{
+        display: block;    
+    }
+
+    .nav__input:checked + .menudesp {
+        display: flex;
+    
+    }                                                                              
+
+    
+                                                                                /*redes sociales*/
+    .social{
+        gap: 4px;
+    }
+    .social a{
+        width: 70px;
+        height: 70px;
+        background-size: 35px;
+    }
+    .social a:hover{
+        background-size: 55px;
+    }
+    .video_main video{
+        object-fit: fill;
+    }     
+
+
+}
+@media screen and (max-width:580px){
+    .contenedorp{
+        height: 250px   ;
+    }
+
+    .formulario{
+        font-size: 12px;
+    }
+
+
+}
+
+                                                                /*Fernando*/
+
+.grid-container-contenido {
+    margin: 0px 10px 0px 10px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "titulo  titulo"
+                         "bloque1 foto1" 
+                         "bloque2 bloque2" 
+                         "foto2   bloque3"
+                         "video   video";
+}
+
+.grid-container-contenido div {
+    text-align: start;
+    padding: 0px;
+    margin: 10px;
+}
+.grid-container-contenido div p{
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+
+
+.titulos {
+    color: #2d477d;
+    font-size: 40px;
+}
+
+.subtitulos{
+    color:#E83028;
+    font-size: 20px;
+    text-decoration: underline;
+}    
+
+.grid-item1 {
+    grid-area: titulo;
+}
+
+.grid-item2 {    
+    grid-area: bloque1;
+}
+
+.grid-item3 {
+    grid-area: bloque2;
+  
+}
+
+.grid-item4 {
+    grid-area: bloque3;
+}
+
+.grid-item5 {
+    grid-area: foto1;  
+    
+    border-radius: 10%;
+}
+
+.grid-item6,.grid-item5,#edu_financiera{
+    box-shadow: 2px 2px 5px  rgb(0, 0, 0);
+
+}
+
+.grid-item6 {
+    grid-area: foto2;
+    border-radius: 10%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10%;
+}
+
+#edu_financiera {
+    grid-area: video;
+    margin: 20px auto 20px auto;
+    border-radius: 5% 5% 5% 5%; 
+    width: 100%;
+}
+
+.iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 500px;
+    border-radius: 5% 5% 5% 5%; 
+    
+}                                       /*página Educación Financera - Grid - Fin*/                               
+
+@media (max-width:1200px) {                             /*Responsive*/
+    .grid-container-contenido{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "titulo    titulo"
+                             "bloque1   bloque1"
+                             "bloque2   foto1" 
+                             "foto2     bloque3"
+                             "video     video";
+    }
+  
+    .iframe{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+    
+    }
+}
+
+@media (max-width:750px) {
+    .grid-container-contenido{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: "titulo"
+                             "bloque1" 
+                             "foto1"
+                             "bloque2" 
+                             "foto2"
+                             "bloque3"
+                             "video";
+    }
+    #edu_financiera{
+        margin: 0;
+    }
+   
+}                                                   /*Responsive - Fin*/
+.acerca-de {                                       /*página Nosotros main*/
+    margin: 8%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-item1,.flex-item2 {
+    background-color: antiquewhite;
+    width: 80%;
+    height: 70%;
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.2;
+    letter-spacing: 1.2;
+    padding: 5%;
+    border: 15px solid rgba(39, 80, 150, 0.8);
+    border-radius: 10%;
+    margin: 5%;
+  
+}
+
+.upper{
+    margin-bottom: 5%;
+
+}
+.nombres{
+    font-size: large;
+    color:rgb(28, 10, 48);
+    font-weight: bold;
+    
+}
+
+.flex-item2 ul li{
+    list-style: none;
+}
+
+.flex-item3 {
+    width: auto;   
+    margin: 5%;
+
+}                                                /*página Nosotros main Fin*/
+
+
