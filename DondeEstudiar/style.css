@@ -1,0 +1,32 @@
+.casas_estudio{                                     /*página "Donde Estudiar"*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+}
+
+.estudiar{
+    border: 3px solid rgb(167, 167, 165, .6);
+    box-shadow: 1px solid grey;
+    margin: 15px;
+    border-radius: 2%;
+    width: 315px;
+}
+
+.estudiar:hover{
+    padding:10px 0px 0px 0px;
+    background-color: rgb(167, 167, 165, .6);
+}
+
+.estudiar img{
+    width: 150px;
+    height: 75px;
+    border: 1px solid rgb(189, 189, 195, .5);
+    float: left;
+    margin:5px 10px;
+}
+
+.cuerpo{
+    padding: 10px;
+    text-align:justify;
+}                                                           /*página "Donde Estudiar" Fin*/
