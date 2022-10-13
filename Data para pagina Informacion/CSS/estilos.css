@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    align-items: center;
+    background-color: rgb(18, 18, 18, .85);
+}
+
+.especie ul{
+    margin: 5px 0px;
+}
+
+.cuerpo{
+   border: 1.5px solid rosybrown;
+   width: 365px;
+}
+
+.cuerpo li{
+    list-style: none;
+    margin: 8px 10px;   
+    color: whitesmoke; 
+}
+
+.c1 img{
+    height:40px;
+    width: 50px;
+}
+
+.c1{
+    height: 45px;
+    width: 50px;
+}
+
+.c2{
+    height: 10px;
+    width: 120px;
+}
+
+.c3{
+    height: 10px;
+    width: 360px;
+}
+
+.c4{
+    height: 10px;
+    width: 100px;
+}
+
+.c5{
+    height: 10px;
+    width: 150px;
+}
+
+.titulo_cotizaciones{
+    font-size: 24px;
+    color: rgb(14, 14, 136);
+    margin: 15px 10px 5px;
+    padding: 10px 5px 0px;
+}
