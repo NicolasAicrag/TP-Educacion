@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: whitesmoke;
+    margin: 15px 10px;
+}
+
+.titulo_encabezado{
+    background-color: rgb(86, 47, 184);
+    color: rgba(240, 244, 246, 0.85);
+    height: 50px;
+}
+
+.titulo_encabezado_logo{
+   width: 40px;
+}
+
+.titulo_encabezado_ticker{
+   width: 50px;
+}
+
+.titulo_encabezado_name{
+   width: 310px;
+}
+
+.titulo_encabezado_last{
+   width: 85px;
+}
+
+.titulo_encabezado_variac{
+   width: 85px;
+}
+
+.fila{
+    background-color: rgb(238, 235, 245);
+    color: rgba(28, 26, 25, 0.8);
+    height: 22px;
+}
+
+.fila:hover{
+    color:rgb(40, 40, 230);
+    background: rgb(228, 221, 241);
+}
+
+.fila_logo{
+   width: 40px;
+}
+
+.logo_img{
+    height: 22px;
+    width: 25px;
+}
+
+.fila_ticker{
+   width: 50px;
+}
+
+.fila_name{
+   width: 310px;
+}
+
+.fila_last{
+   width: 85px;
+}
+
+.fila_variac{
+   width: 85px;
+}
+
+.titulo_cotizaciones{
+    font-size: 24px;
+    color: rgb(14, 14, 136);
+    margin: 15px 10px 5px;
+    padding: 10px 5px 0px;
+}
